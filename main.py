@@ -1,12 +1,26 @@
-from random import *
+# Program Name: GuessAreaRectangleYourName
 
-# computer chooses a random number between 1 and 6
-ranumb = randint(1,6)
-#user inputs a number between 1 and 6
-usernumb = int(input("Enter a number between 1 and 6: "))
-#if the user's number is the same as the computer's number, the user wins
-if usernumb == ranumb:
-  print("You win!") 
-#if the user's number is not the same as the computer's number, the user loses
-else:
-  print("you lose")
+def main():
+    print("Welcome to the Guess Area of Rectangle Game!")
+
+    # Ask the user for the length of the rectangle
+    length = float(input("Enter the length of the rectangle: "))
+
+    # Ask the user for the width of the rectangle
+    width = float(input("Enter the width of the rectangle: "))
+
+    # Calculate the correct area of the rectangle
+    correct_area = length * width
+
+    # Ask the user to guess the area
+    guessed_area = float(input("Guess the area of the rectangle: "))
+
+    # Check if the guessed area is correct
+    if guessed_area == correct_area:
+        print("Congratulations! You guessed the area correctly.")
+    else:
+        print(f"Sorry, that's incorrect. The correct area is {correct_area}.")
+
+# Run the program
+if __name__ == "__main__":
+    main()
